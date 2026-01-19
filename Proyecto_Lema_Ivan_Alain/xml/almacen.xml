@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<casaSubastas nombre="Subastas " pais="España">
+    <categorias>
+        <categoria id="C1" nombre="Arte">
+            <lote id="L1" estado="activo">
+                <nombre>Cuadro de Picasso</nombre>
+                <descripcion>Pintura original del periodo cubista</descripcion>
+                <precioSalida moneda="EUR">50000</precioSalida>
+                <precioActual moneda="EUR">72000</precioActual>
+                <imagen>imagenes/picasso.jpg</imagen>
+                <url></url>
+            </lote>
+            <lote id="L2" estado="activo">
+                <nombre>Escultura romana</nombre>
+                <descripcion>Escultura de mármol del siglo II</descripcion>
+                <precioSalida moneda="EUR">30000</precioSalida>
+                <precioActual moneda="EUR">45500</precioActual>
+                <imagen>imagenes/escultura_romana.jpg</imagen>
+                <url></url>
+            </lote>
+        </categoria>
+        <categoria id="C2" nombre="Vehículos">
+            <lote id="L3" estado="activo">
+                <nombre>Ferrari Testarossa</nombre>
+                <descripcion>Modelo clásico de 1989</descripcion>
+                <precioSalida moneda="EUR">90000</precioSalida>
+                <precioActual moneda="EUR">120000</precioActual>
+                <imagen>imagenes/ferrari.jpg</imagen>
+                <url></url>
+            </lote>
+            <lote id="L4" estado="cerrado">
+                <nombre>Volkswagen Beetle 1965</nombre>
+                <descripcion>Coche clásico restaurado</descripcion>
+                <precioSalida moneda="EUR">15000</precioSalida>
+                <precioActual moneda="EUR">28000</precioActual>
+                <imagen>imagenes/beetle.jpg</imagen>
+                <url></url>
+            </lote>
+        </categoria>
+        <categoria id="C3" nombre="Joyas">
+            <lote id="L5" estado="activo">
+                <nombre>Anillo de diamantes</nombre>
+                <descripcion>Anillo de oro blanco con diamantes</descripcion>
+                <precioSalida moneda="EUR">8000</precioSalida>
+                <precioActual moneda="EUR">13500</precioActual>
+                <imagen>imagenes/anillo.jpg</imagen>
+                <url></url>
+            </lote>
+            <lote id="L6" estado="activo">
+                <nombre>Reloj Rolex</nombre>
+                <descripcion>Rolex Submariner original</descripcion>
+                <precioSalida moneda="EUR">12000</precioSalida>
+                <precioActual moneda="EUR">19500</precioActual>
+                <imagen>imagenes/rolex.jpg</imagen>
+                <url></url>
+            </lote>
+        </categoria>
+        <categoria id="C4" nombre="Historia">
+            <lote id="L7" estado="activo">
+                <nombre>Sable Chino del Siglo XVIII</nombre>
+                <descripcion>ricamente incrustado con oro, plata y joyas, y la espada de presentación de Ulysses S. Grant</descripcion>
+                <precioSalida moneda="EUR">2000000</precioSalida>
+                <precioActual moneda="EUR">2700000</precioActual>
+                <imagen>imagenes/sablechino.jpg</imagen>
+                <url></url>
+            </lote>
+            <lote id="L8" estado="cerrado">
+                <nombre>Espada de Napoleon</nombre>
+                <descripcion>El arma, concebida para el uso personal del entonces Primer Cónsul, acompañó a Napoleón</descripcion>
+                <precioSalida moneda="EUR">700000</precioSalida>
+                <precioActual moneda="EUR">3700000</precioActual>
+                <imagen>imagenes/espadanapoleon.jpg</imagen>
+                <url></url>
+            </lote>
+        </categoria>
+    </categorias>
+</casaSubastas>
