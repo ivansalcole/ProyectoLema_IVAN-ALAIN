@@ -1,0 +1,18 @@
+<!ELEMENT casaSubastas (categorias)>
+<!ATTLIST casaSubastas nombre CDATA #REQUIRED>
+<!ATTLIST casaSubastas pais CDATA #REQUIRED>
+<!ELEMENT categorias (categoria+)>
+<!ELEMENT categoria (lote+)>
+<!ATTLIST categoria id ID #REQUIRED>
+<!ATTLIST categoria nombre (Arte|Vehículos|Joyas|Historia) #REQUIRED>
+<!ELEMENT lote (nombre, descripcion, precioSalida, precioActual, imagen, url)>
+<!ATTLIST lote id ID #REQUIRED>
+<!ATTLIST lote estado (activo|cerrado) #REQUIRED>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT descripcion (#PCDATA)>
+<!ELEMENT precioSalida (#PCDATA)>
+<!ATTLIST precioSalida moneda CDATA #FIXED "EUR">
+<!ELEMENT precioActual (#PCDATA)>
+<!ATTLIST precioActual moneda CDATA #FIXED "EUR">
+<!ELEMENT imagen (#PCDATA)>
+<!ELEMENT url (#PCDATA)>

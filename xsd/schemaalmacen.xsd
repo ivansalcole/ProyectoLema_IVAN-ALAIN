@@ -1,0 +1,83 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <!--Restriccion del id del LOTE-->
+        <xs:simpleType name="idLoteType"> 
+            <xs:restriction base="xs:string"> 
+                    <xs:pattern value="[L][0-9]+"/> 
+            </xs:restriction> 
+        </xs:simpleType>
+    
+    <!--Restriccion del estado del LOTE-->
+        <xs:simpleType name="estadoLoteType">
+            <xs:restriction base="xs:string">
+                <xs:enumeration value="activo"/>
+                <xs:enumeration value="cerrado"/>
+            </xs:restriction>
+        </xs:simpleType>
+    
+    <!--Restriccion del id de la CATEGORIA-->
+
+        <xs:simpleType name="idCategoriaType"> 
+            <xs:restriction base="xs:string"> 
+                    <xs:pattern value="[C][0-9]+"/> 
+            </xs:restriction> 
+        </xs:simpleType>
+
+    <!--Restriccion de 5000 como minimo en salida y actual-->
+        <xs:simpleType name="precioMinimoType">
+            <xs:restriction base="xs:integer">
+                <xs:minInclusive value="5000"/>
+            </xs:restriction>
+        </xs:simpleType>
+
+        <xs:complexType name="precioConMonedaType">
+            <xs:simpleContent>
+                <xs:extension base="precioMinimoType">
+                    <xs:attribute name="moneda" type="xs:string"/>
+                </xs:extension>
+            </xs:simpleContent>
+        </xs:complexType>
+
+    <xs:element name="casaSubastas">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="categorias">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="categoria" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="lote" maxOccurs="unbounded" >
+                                            <xs:complexType>
+                                                <xs:sequence>
+                                                    <xs:element name="nombre" type="xs:string"/>
+                                                    <xs:element name="descripcion" type="xs:string"/>
+                                                    
+                                                    <xs:element name="precioSalida" type="precioConMonedaType"/>
+                                                    <xs:element name="precioActual" type="precioConMonedaType"/>
+
+                                                    <xs:element name="imagen" type="xs:string"/>
+                                                    <xs:element name="url" type="xs:anyURI"/>
+                                                </xs:sequence>
+
+                                                <xs:attribute name="id" type="idLoteType"/>
+                                                <xs:attribute name="estado" type="estadoLoteType"/>
+
+                                            </xs:complexType>
+                                        </xs:element>
+                                    </xs:sequence>
+
+                                    <xs:attribute name="id" type="idCategoriaType"/>
+                                    <xs:attribute name="nombre" type="xs:string"/>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+
+            <xs:attribute name="nombre" type="xs:string"/>
+            <xs:attribute name="pais" type="xs:string"/>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>
